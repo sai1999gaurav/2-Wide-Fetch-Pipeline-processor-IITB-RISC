@@ -1,0 +1,29 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vcom -93 -work work {/home/gaurav/Desktop/Sem5/EE309/project2/Project2/main3.vhdl}
+vcom -93 -work work {/home/gaurav/Desktop/Sem5/EE309/project2/Project2/priorityencoder.vhdl}
+vcom -93 -work work {/home/gaurav/Desktop/Sem5/EE309/project2/Project2/lmsmblock.vhdl}
+vcom -93 -work work {/home/gaurav/Desktop/Sem5/EE309/project2/Project2/fa16bit.vhd}
+vcom -93 -work work {/home/gaurav/Desktop/Sem5/EE309/project2/Project2/fa8bit.vhd}
+vcom -93 -work work {/home/gaurav/Desktop/Sem5/EE309/project2/Project2/fa1bit.vhd}
+vcom -93 -work work {/home/gaurav/Desktop/Sem5/EE309/project2/Project2/RREX.vhdl}
+vcom -93 -work work {/home/gaurav/Desktop/Sem5/EE309/project2/Project2/regfilewithr7.vhdl}
+vcom -93 -work work {/home/gaurav/Desktop/Sem5/EE309/project2/Project2/queue.vhd}
+vcom -93 -work work {/home/gaurav/Desktop/Sem5/EE309/project2/Project2/opcodecontrol.vhdl}
+vcom -93 -work work {/home/gaurav/Desktop/Sem5/EE309/project2/Project2/MAWB.vhdl}
+vcom -93 -work work {/home/gaurav/Desktop/Sem5/EE309/project2/Project2/imemory.vhdl}
+vcom -93 -work work {/home/gaurav/Desktop/Sem5/EE309/project2/Project2/IFID.vhdl}
+vcom -93 -work work {/home/gaurav/Desktop/Sem5/EE309/project2/Project2/IDRR.vhdl}
+vcom -93 -work work {/home/gaurav/Desktop/Sem5/EE309/project2/Project2/EXMA.vhdl}
+vcom -93 -work work {/home/gaurav/Desktop/Sem5/EE309/project2/Project2/dmemory.vhdl}
+vcom -93 -work work {/home/gaurav/Desktop/Sem5/EE309/project2/Project2/alu4.vhdl}
+vcom -93 -work work {/home/gaurav/Desktop/Sem5/EE309/project2/Project2/alu3.vhd}
+vcom -93 -work work {/home/gaurav/Desktop/Sem5/EE309/project2/Project2/alu2.vhd}
+vcom -93 -work work {/home/gaurav/Desktop/Sem5/EE309/project2/Project2/alu1.vhdl}
+vcom -93 -work work {/home/gaurav/Desktop/Sem5/EE309/project2/Project2/scoreboard.vhd}
+

@@ -1,0 +1,38 @@
+-- fpga4student.com: FPGA projects, Verilog projects, VHDL projects
+-- VHDL project: VHDL code for single-cycle MIPS Processor
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+USE IEEE.numeric_std.all;  
+-- VHDL code for the register file of the MIPS Processor
+entity scoreboard is
+port (
+   rst: in std_logic;
+ dest_reg1, dest_reg2, reg_read_addr, wr_reg: in std_logic_vector(2 downto 0);
+ reg_type: out std_logic
+);
+end scoreboard;
+
+architecture Behavioral of register_file_VHDL is
+type reg_type is array (0 to 7 ) of std_logic;
+type reg_type2 is array (0 to 7 ) of std_logic_vector(2 downto 0);
+signal reg_array: reg_type;
+signal count: reg_type2;
+begin
+ process(rst, dest_reg1, dest_reg2, reg_read_addr) 
+ begin
+ if(rst='1') then
+   count(7 downto 0) <= "000000000000000000000"
+   reg_array(7 downto 0) <= "00000000";
+ end if;
+   --if(rising_edge(clk)) then
+if (rst = '0') then
+   reg_array(to_integer(unsigned(wr_reg))) <= '1';
+   reg_array(to_integer(unsigned(dest_reg1))) <= '1';
+   reg_array(to_integer(unsigned(dest_reg2))) <= '1';
+
+ end if;
+ end process;
+
+ reg_type <= reg_array(to_integer(unsigned(reg_read_addr)));
+
+end Behavioral;
